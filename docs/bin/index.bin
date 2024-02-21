@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Rebex SSH Check is a testing tool for SSH servers accessible over internet. The report contains an overview of SSH configuration of the server as well as security recommendations. The service is free." />
+
+	<title>Rebex SSH Check</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/styles.css" />
+	<link rel="icon" href="/favicon.ico">
+	<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PMXQCVJ');</script>
+	<!-- End Google Tag Manager -->
+
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMXQCVJ"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Rebex SSH Check</a>
+				</div>
+			</div>
+		</nav>
+
+		
+<div class="container theme-showcase" role="main">
+	<div class="page-header">
+		<h1>Rebex SSH Check</h1>
+	</div>
+
+	
+
+<h4>Enter a hostname or IP address below to check the server's SSH capabilities:</h4>
+<br/>
+<form class="form-inline">
+	<div class="form-group">
+		<div class="input-group">
+			<input class="form-control input-lg" placeholder="Hostname or IP" type="text" data-val="true" data-val-minlength="Please input valid host name or IP address" data-val-minlength-min="3" data-val-required="The Hostname field is required." id="Hostname" name="Hostname" value="" />
+			<div class="input-group-addon">:</div>
+			<input type="text" class="form-control input-lg" placeholder="Port (22)" style="width:105px !important" data-val="true" data-val-range="Please input valid port number, e.g. 22" data-val-range-max="65535" data-val-range-min="1" id="Port" name="Port" value="" />
+		</div>
+		<input class="btn btn-primary input-lg" type="submit" value="Test" id="submit" style="width:90px" />
+	</div>
+</form>
+
+
+<hr />
+
+<p>
+    This free SSH testing tool checks the configuration of given server accessible over internet.
+    We don't ask you for any login or password, this service only returns information available during SSH handshake - notably supported encryption and MAC algorithms, and an overview of offered server public keys.
+</p>
+
+<p>
+	<a href="/server/test.rebex.net">See an example here</a>
+</p>
+
+
+<hr/>
+<h4>Changelog</h4>
+<p>
+	2022-11-14: Technological update
+</p>
+<p>
+	2022-10-24: IPv6 support
+</p>
+<p>
+	2022-09-30: Support for multiple IPs per hostname
+</p>
+<p>
+	2022-07-25: Technological update
+</p>
+<p>
+	2020-10-06: Cache clearing support
+</p>
+<p>
+    2017-06-29: Adding support for rsa-sha2-256, rsa-sha2-512 and ssh-rsa-sha256@ssh.com keys.
+</p>
+<p>
+    2017-06-21: SshCheck should no longer crash when there is no common SSH algorithm between us and the queried server (as was the case with e.g. chacha20-poly1305).
+</p>
+<p>
+    2017-06-19: Please note that IPv6 queries are still not functional. We're trying to fix this. Another issue is querying servers with only chacha20-poly1305 and aes-gcm algorithms. We're working on that as well. 
+</p>
+<p>
+    2017-06-16: Decreased cache expiry to 10 seconds. Reclassified security level of some algorithms.
+</p>
+
+
+</div>
+
+
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p>
+				SshCheck.com is maintained by developers from <a href="https://www.rebex.net">Rebex</a>. <a href="https://www.rebex.net/doc/contact/">Contact us</a>.
+			</p>
+			<p>
+				<strong>More code and tools:</strong>
+			</p>
+			<ul style="list-style: none">
+            	<li>
+            		.NET libraries: <a href="https://www.rebex.net/sftp.net/">SFTP client</a>, <a href="https://www.rebex.net/file-server/">SFTP/SCP/SSH server</a>, <a href="https://www.rebex.net/terminal-emulation.net/">SSH/Telnet client</a>.
+            	</li>
+            	<li>
+            		Applications: <a href="https://www.rebex.net/tiny-sftp-server/">Tiny SFTP server (free)</a>, <a href="https://www.rebex.net/buru-sftp-server/">Rebex Buru SFTP Server for Windows</a>
+            	</li>
+            	<li>
+            		SFTP protocol info site: <a href="https://sftp.net/">Sftp.net</a>
+            	</li>
+            </ul>
+			<p style="font-size: smaller">
+				<button id="ot-sdk-btn" class="ot-sdk-show-settings" style="display: none"></button>
+				<a href="#" onclick="document.getElementById('ot-sdk-btn').click()">Manage cookies</a> |
+				<a href="https://www.rebex.net/doc/privacy-policy/">Privacy policy</a>
+			</p>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	
+	
+	<script language="javascript">
+		$('FORM')
+            .submit(function () {
+                var hostname = $("INPUT#Hostname").val();
+                hostname = hostname.replace(/http.*:\/\//, "");
+				hostname = hostname.trim();
+		        if (hostname === '') return false;
+		        
+		        var port = $("INPUT#Port").val().trim() || "22";
+		        dataLayer.push({
+                    'event':'gaEvent',
+                    'gaEventData': {
+                      'eCat':'Form submission', 
+                      'eAct':'ssh-check-submitted', 
+                      'eLab':hostname + ':' + port 
+                    },
+                    'eventCallback' : function() {
+                      dataLayer.push({'gaEventData': undefined });
+                    }
+                  });
+		        
+				document.location = '/server/' + encodeURIComponent(hostname) + '/' + $('INPUT#Port').val();
+				return false;
+			});
+	</script>
+
+
+</body>
+</html>
